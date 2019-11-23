@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title Annette Redhead
+    link(rel='stylesheet', href='/stylesheets/Admin_forms.css')
+  body
+    h1 Edit post
+    p Add language
+      input(type="text" id="add_language_input" placeholder="en example")
+      button#add_language_button Add 
+    h2#loading Loading, please wait a second
+    p#id_category(style="display:none") #{id_category}
+    p#number_of_post(style="display:none") #{number_of_post}
+  #container.disable
+    form#register-form(enctype="multipart/form-data" method="post" action="/AdminPannel/editPost?id_category="+id_category+"&number="+number_of_post) 
+      input(style="display:none" name="id_category" value=id_category)
+      button(type="submit") Изменить
+  script(src="/javascripts/JQuery.js")  
+  script(src='/javascripts/enableTab.js')
+  script(src='/javascripts/addPost.js')  
+  script(src='/javascripts/editPost.js')  
+

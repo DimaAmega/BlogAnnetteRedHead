@@ -1,0 +1,22 @@
+mixin create_card_category(data)
+  .card_post
+    ul
+      li.title #{data.title.en}
+      li.tools.update
+        a(data=data._id) Edit
+      li.tools.delete
+        a(data=data._id) Delete this category
+doctype html
+html
+  head
+    title Annette Redhead
+    link(rel='stylesheet', href='/stylesheets/admin_Pannel.css')
+  body
+    h1 Hello #{user} on admin pannel!
+    a#addPost(href="/AdminPannel/addNewCategory") Add new category
+    for d_i in data
+      +create_card_category(d_i)
+    script(src="/javascripts/adminPannel.js")
+    script(src="/javascripts/changeLanguage.js")
+
+    

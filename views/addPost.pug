@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Annette Redhead
+    link(rel='stylesheet', href='/stylesheets/Admin_forms.css')
+  body
+    h1 Add post to #{name_category} category
+    p Add language
+      input(type="text" id="add_language_input" placeholder="en example")
+      button#add_language_button Add 
+  #container.disable
+    form#register-form(enctype="multipart/form-data" method="post" action="/AdminPannel/addPost/") 
+      input(style="display:none" name="id_category" value=id_category)
+      button(type="submit") Отправить
+  script(src="/javascripts/JQuery.js")  
+  script(src='/javascripts/enableTab.js')
+  script(src='/javascripts/addPost.js')  

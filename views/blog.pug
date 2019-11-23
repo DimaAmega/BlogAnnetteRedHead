@@ -1,0 +1,9 @@
+extends layout
+block content
+    main(class="content grid")
+        for d_i in data
+            +create_card(d_i)
+    footer
+        p &#169; | copyright Annette Redhead
+    script(src="/javascripts/dinamicBlog.js")
+    //- script(src="/javascripts/changeLanguage.js")

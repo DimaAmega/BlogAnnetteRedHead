@@ -1,0 +1,59 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration:none;
+    color: black;
+    cursor: pointer;
+}
+h1,h2 {
+    text-align: center;
+}
+li {
+    display: block;
+    list-style-type: none; /* Убираем маркеры */
+   }
+ul {
+padding: 0;
+margin: 3px;
+}
+
+.card_post {
+text-align: center;
+position: relative;
+margin: 0 auto;
+background:rgb(184, 162, 162);
+margin-bottom: 2px;
+border-radius: 5px;
+width: 90%;
+}
+.card_post .tools {
+display: inline-block;
+margin:0 auto;
+padding:  0 10px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.title{
+margin: 0;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+a:hover{
+    color: white;
+}
+#addPost{
+    font-size:20px; 
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+}
+#addPost:hover{
+    color:blue;
+}

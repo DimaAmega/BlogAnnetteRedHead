@@ -1,0 +1,21 @@
+- var nav_data = [{content:"About",link:"/about"},{content:"Blog",link:"/blog"},{content:"Gallery",link:"/gallery"},{content:"Contacts",link:"/contacts"},{content:"Rewiews",link:"/rewiews"}];
+mixin create_card(data)
+  div(class=data.class)
+    a(href=data.url)
+        img(src=data.img_url)
+    p.art_title
+        a(href=data.url)=data.title
+    p.art_mark
+        a(href=data.mark_url)=data.mark
+html
+  head
+    title Annette Redhead
+    link(rel='stylesheet', href='/stylesheets/blog_style.css')
+  body
+    header
+      nav
+        ul
+          for n_d_i in nav_data
+            li
+              a(href=n_d_i.link)= n_d_i.content
+  block content

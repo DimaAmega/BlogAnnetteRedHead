@@ -1,0 +1,25 @@
+- var count = 0;
+mixin create_card_post(data)
+  .card_post
+    ul
+      if data.en
+        li.title #{data.en.title}
+      else
+        li.title Not En Language addied! Click Edit
+      li.tools.update
+        a(data=count) Edit article
+      li.tools.delete
+        a(data=count++) Delete article
+doctype html
+html
+  head
+    title Annette Redhead
+    link(rel='stylesheet', href='/stylesheets/admin_Pannel.css')
+  body
+    h1(data=id_category) Edit #{category} category
+    a#addPost(href="/AdminPannel/addPost?id_category="+id_category) Add new post
+    for d_i in data
+      +create_card_post(d_i)
+    script(src="/javascripts/JQuery.js")
+    script(src="/javascripts/editorCategory.js")
+    

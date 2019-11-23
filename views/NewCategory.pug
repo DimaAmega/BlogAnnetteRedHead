@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title Annette Redhead
+    link(rel='stylesheet', href='/stylesheets/Admin_forms.css')
+  body
+    h1 Add new Category
+    .container
+        form.register-form(method="post" action="/AdminPannel/addNewCategory")
+            p Название категории
+            input(type="text" placeholder="ru" name="ru")
+            input(type="text" placeholder="en" name="en")
+            input(type="text" placeholder="fr" name="fr")
+            button(type="submit") Отправить
+  //- script(src="/javascripts/newCategory.js")
